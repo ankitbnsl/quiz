@@ -43,6 +43,7 @@ let updateOptions =()=>{
             buttoncontainer.appendChild(btn);
     })
     container.style.display="block";
+    buttoncontainer.style.display='block';
      next.style.display="block";
 }
 
@@ -62,17 +63,19 @@ next.addEventListener('click',()=>{
         index += 1;
         updateOptions();
     }else{
-        index=-1;
-        document.querySelector('h1').innerHTML=`Quiz ends here , your score ${correctAnswers}`;
-        correctAnswers=0;
-        container.style.display='none';
-        next.innerHTML='Start Again';
+        if(index==3){
+            questionText.innerHTML=`Quiz ends here , your score ${correctAnswers}`;
+            buttoncontainer.style.display='none';
+            next.innerHTML='Start Again';
+            index=-1;
+        }else{
+            startQuiz();   
+        }
     }
 })
 
 let startQuiz=()=>{
      index=0;
-     container.style.display='block';
      next.innerHTML='next';
      correctAnswers=0;
      updateOptions();
