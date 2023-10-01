@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .outer {
+            /* background: linear-gradient(120deg, pink, rgb(119, 60, 48)); */
+            background-color: rgb(167, 153, 153);
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto;
+            border-radius: 15px;
+        }
+
+        h1 {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            color: aliceblue;
+            font-weight: 800;
+        }
+
+        .container h2 {
+            color: white;
+            font-weight: 600;
+            padding: 20px;
+        }
+
+        .container {
+            display: none;
+        }
+
+        .container button {
+            width: 90%;
+            padding: 10px;
+            color: white;
+            margin: 10px auto;
+            display: block;
+            border-radius: 15px;
+            border: 0;
+            font-size: 20px;
+            background-color: rgb(85, 79, 79);
+            cursor: pointer;
+
+        }
+
+        #next {
+            display: none;
+            margin: 15px auto;
+            width: 100px;
+            border-radius: 15px;
+            border: 0;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: rgb(9, 9, 26);
+        }
+
+        .buttoncontainer .correct {
+            background-color: green;
+        }
+
+        .buttoncontainer .incorrect {
+            background-color: red;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: no-drop;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <h1>
+            Quizz for u
+        </h1>
+        <div class="container">
+            <h2>1. Question</h2>
+            <div class="buttoncontainer">
+                <!-- <button>Button1</button>
+                <button>Button2</button>
+                <button>Button3</button>
+                <button>Button4</button> -->
+            </div>
+        </div>
+        <button id="next">Next</button>
+    </div>
+
+    <script src="quizscript.js"></script>
+</body>
+
+</html>
